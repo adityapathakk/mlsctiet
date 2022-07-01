@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d57a03ab.css",
+    "main.js": "/static/js/main.d8ce4368.js",
+    "static/media/image.png": "/static/media/image.4369d29914c0eff47298.png",
+    "static/media/mlsc_shield_new.png": "/static/media/mlsc_shield_new.897464249c85ed4f07c1.png",
+    "static/media/mlsc-logo.png": "/static/media/mlsc-logo.13f9160c49942ec13624.png",
+    "index.html": "/index.html",
+    "main.d57a03ab.css.map": "/static/css/main.d57a03ab.css.map",
+    "main.d8ce4368.js.map": "/static/js/main.d8ce4368.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d57a03ab.css",
+    "static/js/main.d8ce4368.js"
+  ]
+}
