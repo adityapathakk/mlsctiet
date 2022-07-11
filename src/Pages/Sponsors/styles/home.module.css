@@ -260,7 +260,64 @@
     height: 40vw;
     position: relative;
     border-radius: 20px;
+
+    /* ------- flex properties ------- */
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: space-around;
 }
+
+.box1 img{
+  height: 22vh;
+}
+
+.box2 img{
+  height: 22vh;
+}
+
+.box3 img{
+  height: 22vh;
+}
+
+.box4 img{
+  height: 22vh;
+}
+
+.box5 img{
+  height: 22vh;
+}
+
+.box6 img{
+  height: 22vh;
+}
+
+.box7 img{
+  height: 22vh;
+}
+
+.box8 img{
+  height: 22vh;
+}
+
+.box9 img{
+  height: 22vh;
+}
+
+.box10 img{
+  height: 22vh;
+}
+
+.box11 img{
+  height: 22vh;
+}
+
+.box12 img{
+  height: 22vh;
+}
+
 
 .spnsorformsubmit{
     position: relative;

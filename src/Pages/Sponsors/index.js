@@ -70,7 +70,61 @@ const Sponsors = () => {
 
     {/* why sponsor us div ends here and second corousel div starts */}
     
-    <div className={styles.carousel2}> lol</div>
+    <div className={styles.carousel2}>
+      <div className={styles.box1}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box2}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box3}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box4}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box5}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box6}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box7}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box8}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box9}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box10}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box11}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      <div className={styles.box12}>
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+
+      
+    
+    
+    
+    
+    </div>
 
     {/*Second carousel ends, Form begins*/}
     
