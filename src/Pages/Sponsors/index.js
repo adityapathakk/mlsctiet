@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/home.module.css";
-
+import logo from "./assets/mlsc_shield_new.png";
 
 
 
@@ -12,7 +12,32 @@ const Sponsors = () => {
     
     {/* First carousel */}
 
-    <div className={styles.carousel}> lol</div>
+    <div className={styles.carousel1}>
+
+      <div className={styles.container1}>
+
+        {/* <div className={styles.cont}>
+          <div className={styles.dots_d1}></div>
+          <div className={styles.dots_d2}></div>
+          <div className={styles.dots_d3}></div>
+          <div className={styles.dots_d4}></div>
+          <div className={styles.dots_d5}></div>
+          <div className={styles.dots_d6}></div>
+          <div className={styles.dots_d7}></div>
+          <div className={styles.dots_d8}></div>
+	      </div> */}
+
+        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+      </div>
+      <div className={styles.containerSpace}></div>
+        
+      <div className={styles.container2}>
+        <h2 classname={styles.sponsorText}>Name of company</h2>
+        <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+        <h2 classname={styles.sponsorText}>About the company</h2>
+      </div>
+    </div>
+
 
     <div className={styles.whysponsorus}>
       <h2 className={styles.subheading}> Why Sponsor Us? </h2>
@@ -20,32 +45,32 @@ const Sponsors = () => {
       {/* First Para */}
 
       <p className={styles.sponsorPara}>
-        <span className={styles.sponsorText}>Youth Hub:</span>
+        <span className={styles.sponsorText}>Youth Hub:&nbsp;</span>
         MLSC is one of the elite clubs of TIET and has a reach to a crowd of over 10000 people on campus, which is a huge audience base to begin with.</p>
 
       {/* Second Para */}
  
       <p className={styles.sponsorPara}> 
-        <span className={styles.sponsorText}>Connecting Tech Enthusiasts all over India:</span>
+        <span className={styles.sponsorText}>Connecting Tech Enthusiasts all over India:&nbsp;</span>
         MLSC, is also an Open Source Community and on our discord server, we have a reach of over 1100 people from all around the nation, including premium institutes like IITs and NITs.</p>
 
       {/* Third Para */}
 
       <p className={styles.sponsorPara}>
-        <span className={styles.sponsorText}>Flagship Events:</span>
+        <span className={styles.sponsorText}>Flagship Events:&nbsp;</span>
         MLSC conducts some big events throughout the year, which is an exhibit for a massive crowd both offline and online. Our past events like Makeathon and Abhyudaya have been a major attraction to a magnificent audience, which gives you the exact opportunity to increase your brand’s awareness and have the organic reach you were looking for</p>
 
       {/* Fourth Para */}
 
       <p className={styles.sponsorPara}>
-        <span className={styles.sponsorText}>Ultimate Social Media Reach:</span>
+        <span className={styles.sponsorText}>Ultimate Social Media Reach:&nbsp;</span>
          MLSC has a social media outreach of over 8000 across the platforms like Facebook, Instagram, LinkedIn and Discord. Strategically advertising your brand escalates your brand’s reputation among the audience you look for, which is the youth.</p>
 
     </div>
 
     {/* why sponsor us div ends here and second corousel div starts */}
     
-    <div className={styles.carousel}> lol</div>
+    <div className={styles.carousel2}> lol</div>
 
     {/*Second carousel ends, Form begins*/}
     
