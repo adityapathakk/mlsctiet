@@ -227,8 +227,22 @@ input[type="submit"]{
     font-size:1.75rem;
 }
 
-@media screen and (max-width:576px){
-  .home_heading_1CRgl{
-    font-size:1rem;
+@media (max-width:576px) {
+  .home_heading__1CRgL{
+    font-size:2rem;
   }
+  .home_main__99PWs{
+    padding-left:1rem;
+  }
+  .home_carousel1__abpQ3{
+    flex-wrap: wrap;
+  }
+  .home_container1__79Lta img{
+    height:25vh;
+    padding-left:2vw;
+  }
+  .home_subheading__US6OT{
+    font-size:2rem;
+  }
+
 }
