@@ -1,7 +1,7 @@
 .main{
     padding-left: 5rem;
     background-color: black;
-    height: 500vh;
+    height: 450vh;
     /* width: fit-content; */
     padding-right: 5rem;
     max-width: 100%;
@@ -10,157 +10,6 @@
 
 /* Adding the animation part here */
 
-/* /* .cont {
-    position: relative;
-     top: 50%;
-    left: 50%; 
-    transform: translate(-50%,-50%);
-    display: inline;
-} 
-  
-  .dots {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-     position: relative; 
-    transform: translate(0px,0px);
-  }
-  
-  .dots_d1 {
-    transform: rotate(0deg) translateX(80px);
-    background: blue;
-    animation: orbit1 2.5s ease-in-out infinite alternate;
-    z-index: 10;
-  }
-  
-  .dots_d2 {
-    transform: rotate(-90deg) translateX(80px);
-    background: #377b37;
-    animation: orbit2 2.5s ease-in-out infinite alternate;
-    z-index: 8;
-  }
-  
-  .dots_d3 {
-    transform: rotate(180deg) translateX(80px);
-    background: #afaf29;
-    animation: orbit3 2.5s ease-in-out infinite alternate;
-    z-index: 6;
-  }
-  
-  .dots_d4 {
-    transform: rotate(90deg) translateX(80px);
-    background: #7a5afb;
-    animation: orbit4 2.5s ease-in-out infinite alternate;
-    z-index: 4;
-  }
-  
-  .dots_d5 {
-    transform: rotate(135deg) translateX(80px);
-    background: #e62575;
-    animation: orbit5 2.5s ease-in-out infinite alternate;
-    z-index: 5;
-  }
-  
-  .dots_d6 {
-    transform: rotate(225deg) translateX(80px);
-    background: #967e77;
-    animation: orbit6 2.5s ease-in-out infinite alternate;
-    z-index: 7;
-  }
-  
-  .dots_d7 {
-    transform: rotate(315deg) translateX(80px);
-    background: #d432c7;
-    animation: orbit7 2.5s ease-in-out infinite alternate;
-    z-index: 9;
-  }
-  
-  .dots_d8 {
-    transform: rotate(405deg) translateX(80px);
-    background: #00bcd4;
-    animation: orbit8 2.5s ease-in-out infinite alternate;
-    z-index: 3;
-  }
-  
-@keyframes orbit1 {
-    0% {
-      transform: rotate(0deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(360deg) translateX(0px) scale(1.2,1.2);
-    }
-}
-  
-@keyframes orbit2 {
-    0% {
-      transform: rotate(-90deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(270deg) translateX(0px) scale(1.6,1.6);
-    }
-}
-  
-@keyframes orbit3 {
-    0% {
-      transform: rotate(180deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(540deg) translateX(0px) scale(2,2);
-    }
-}
-  
-@keyframes orbit4 {
-    0% {
-      transform: rotate(90deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(450deg) translateX(0px) scale(2.4,2.4);
-    }
-}
-  
-@keyframes orbit5 {
-    0% {
-      transform: rotate(135deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(495deg) translateX(0px) scale(2.2,2.2);
-    }
-}
-  
-@keyframes orbit6 {
-    0% {
-      transform: rotate(225deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(585deg) translateX(0px) scale(1.8,1.8);
-    }
-}
-  
-@keyframes orbit7 {
-    0% {
-      transform: rotate(315deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(675deg) translateX(0px) scale(1.4,1.4);
-    }
-}
-  
-@keyframes orbit8 {
-    0% {
-      transform: rotate(405deg) translateX(80px) scale(1,1);
-    }
-  
-    100% {
-      transform: rotate(765deg) translateX(0px) scale(2.6,2.6);
-    }
-} */
 
 
 
@@ -325,7 +174,13 @@
     top:1.5rem;
 }
 
+.errormssg{
+  color: red;
+}
 
+.success{
+  color: #ffffff;
+}
 
 /* the following are used to set the background color as black of form fields */
 input[type="text"], textarea {
@@ -353,6 +208,7 @@ textarea{
     font-size: large;
     padding: 1vw;
     font-size: 3vh;
+    line-height: 1.2em;
 }
 
 /* whenever text is written now, text will be white in color */
@@ -369,4 +225,10 @@ input[type="submit"]{
     width:12rem;
     text-align: center;
     font-size:1.75rem;
+}
+
+@media screen and (max-width:576px){
+  .home_heading_1CRgl{
+    font-size:1rem;
+  }
 }

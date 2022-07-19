@@ -1,43 +1,214 @@
 import React from "react";
 import styles from "./styles/home.module.css";
 import logo from "./assets/mlsc_shield_new.png";
+import { useState , useEffect} from "react";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+//import 'swiper/css';
+//import Swiper from 'swiper/bundle';
+// import styles bundle
+import 'swiper/css/bundle';
 
 
 
 const Sponsors = () => {
+  const initialValues= { fullName: "", companyName: "", email: "", desciption: ""};
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+
+  const handleChange = (e) => {
+    // console.log(e.target);
+    const { name , value } = e.target;
+    setFormValues({...formValues, [name]: value});
+    console.log(formValues);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues)); 
+    setIsSubmit(true);
+
+
+  }
+
+  useEffect(() => {
+    console.log(formErrors);
+    if(Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  },[formErrors]);
+
+  const validate = (values) => {
+    const errors={};
+    const regex =/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    
+    if(!values.fullName) {
+      errors.fullName = "Full name is required!";
+    }
+
+    if(!values.companyName) {
+      errors.companyName = "Company name is required!";
+    }
+
+    if(!values.email) {
+      errors.email = "E-mail is required!";
+    } else if(!regex.test(values.email)){
+      errors.email = "This e-mail is not valid";
+    }
+
+    // if(!values.desciption) {
+    //   errors.desciption = "Description is required!";
+    // }
+
+    return errors;
+  }
 
   return( 
   <div className={styles.main}>
+
     <h1 className={styles.heading}>Our Sponsors</h1>
     
     {/* First carousel */}
-
-    <div className={styles.carousel1}>
-
-      <div className={styles.container1}>
-
-        {/* <div className={styles.cont}>
-          <div className={styles.dots_d1}></div>
-          <div className={styles.dots_d2}></div>
-          <div className={styles.dots_d3}></div>
-          <div className={styles.dots_d4}></div>
-          <div className={styles.dots_d5}></div>
-          <div className={styles.dots_d6}></div>
-          <div className={styles.dots_d7}></div>
-          <div className={styles.dots_d8}></div>
-	      </div> */}
-
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-      <div className={styles.containerSpace}></div>
+    
+      <Swiper
+        slidesPerView={1}
+        centeredSlides={true}
+        spaceBetween={30}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        // pagination={{
+        //   dynamicBullets: true,
+        //   clickable: true,
+        // }}
+        // modules={[Autoplay, Pagination]}
+        className={styles.mySwiper}
+      >
+         <SwiperSlide> {/*this is the info of the first power sponsor,i.e the the first swiper slide */}
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
         
-      <div className={styles.container2}>
-        <h2 classname={styles.sponsorText}>Name of company</h2>
-        <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-        <h2 classname={styles.sponsorText}>About the company</h2>
-      </div>
-    </div>
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
 
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+      </Swiper>
+
+    {/*carousel div ends right here and WHY SPONSOR US div starts from here */}
 
     <div className={styles.whysponsorus}>
       <h2 className={styles.subheading}> Why Sponsor Us? </h2>
@@ -118,11 +289,6 @@ const Sponsors = () => {
       <div className={styles.box12}>
         <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
       </div>
-
-      
-    
-    
-    
     
     </div>
 
@@ -132,27 +298,29 @@ const Sponsors = () => {
 
     <div className={styles.sponsorForm}>
       
-      <form method="get">
+      <form method="get" onSubmit={handleSubmit}>
         
         <label for="spnsor-fullname"></label>
-        <input type="text" placeholder="Full Name" size="23"></input>
-        <p></p>
+        <input type="text" name ="fullName" placeholder="Full Name" size="23" value={formValues.fullName} onChange={handleChange}></input>
+        <p className={styles.errormssg}>{formErrors.fullName}</p>
 
         <label for="spnsor-companyname"></label>
-        <input type="text" placeholder="Company Name" size="23"></input>
-        <p></p>
+        <input type="text" name="companyName" placeholder="Company Name" size="23" value={formValues.companyName} onChange={handleChange}></input>
+        <p className={styles.errormssg}>{formErrors.companyName}</p>
         
         <label for="spnsor-email"></label>
-        <input type="email" placeholder="Email-Address" size="100"></input>
-        <p></p>
+        <input type="email" name="email" placeholder="Email-Address" size="100" value={formValues.email} onChange={handleChange}></input>
+        <p className={styles.errormssg}>{formErrors.email}</p>
 
         <label for="spnsor-message"></label>
-        <textarea rows="10" cols="33" placeholder="Type your message here..."></textarea>
-        <p></p>
+        <textarea rows="10" name="description" cols="33" placeholder="Type your message here..."  onChange={handleChange}></textarea>
+        <p className={styles.errormssg}>{formErrors.desciption}</p>
 
         <div className={styles.spnsorformsubmit}>
         <input type="submit" name=""></input>
         </div>
+
+        {Object.keys(formErrors).length === 0 && isSubmit ? (<div className={styles.success}>Your message has been conveyed!</div>):(<div></div>)}
 
       </form>
     </div>
