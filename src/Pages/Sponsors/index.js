@@ -1,13 +1,21 @@
-import React from "react";
+import React from "react";  
 import styles from "./styles/home.module.css";
 import logo from "./assets/mlsc_shield_new.png";
-import { useState , useEffect} from "react";
+import { useRef,useState , useEffect} from "react";
+import circle from "./assets/circle.png";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-//import 'swiper/css';
-//import Swiper from 'swiper/bundle';
-// import styles bundle
-import 'swiper/css/bundle';
+//Ikshan's code for swiper JS
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 
 
@@ -58,10 +66,6 @@ const Sponsors = () => {
       errors.email = "This e-mail is not valid";
     }
 
-    // if(!values.desciption) {
-    //   errors.desciption = "Description is required!";
-    // }
-
     return errors;
   }
 
@@ -71,142 +75,297 @@ const Sponsors = () => {
     <h1 className={styles.heading}>Our Sponsors</h1>
     
     {/* First carousel */}
-    
-      <Swiper
-        slidesPerView={1}
-        centeredSlides={true}
-        spaceBetween={30}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
+
+    <Swiper
+        pagination={{
+          type: "progressbar",
         }}
-        // pagination={{
-        //   dynamicBullets: true,
-        //   clickable: true,
-        // }}
-        // modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 5000,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
         className={styles.mySwiper}
       >
-         <SwiperSlide> {/*this is the info of the first power sponsor,i.e the the first swiper slide */}
-        <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
-          
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
-        </SwiperSlide>
-        
         <SwiperSlide>
         <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
-          
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
-        </SwiperSlide>
-        
-        <SwiperSlide>
-        <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
-          
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
-        </SwiperSlide>
+          <img className={styles.circle} src={circle} alt="animation"></img>
+            <div className={styles.container1}> 
+              
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
 
-        <SwiperSlide>
-        <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
+            <div className={styles.containerSpace}></div>
           
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div> 
         </div>
         </SwiperSlide>
-
         <SwiperSlide>
         <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
+            <div className={styles.container1}> 
+              <img className={styles.circle} src={circle} alt="animation"></img>
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
           
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div> 
+          </div>
         </SwiperSlide>
-
         <SwiperSlide>
-        <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
+          <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
           
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div> 
+          </div>
+
         </SwiperSlide>
-
         <SwiperSlide>
         <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
           
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
-        </div>
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div> 
+          </div>
         </SwiperSlide>
-
         <SwiperSlide>
         <div className={styles.carousel1}>
-          <div className={styles.container1}> 
-            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-          </div>
-          <div className={styles.containerSpace}></div>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
           
-          <div className={styles.container2}>
-            <h2 classname={styles.sponsorText}>Name of company</h2>
-            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
-            <h2 classname={styles.sponsorText}>About the company</h2>
-          </div> 
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div>
+        </div> 
+
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
+          
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div>  
+            </div>         
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
+          
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div>  
+          </div>         
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
+          
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div>  
+          </div>         
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+              <img className={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+
+            <div className={styles.containerSpace}></div>
+          
+            <div className={styles.container2}>
+              <h2 classname={styles.sponsorText}>Name of company</h2>
+              <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+              <h2 classname={styles.sponsorText}>About the company</h2>
+            </div> 
         </div>
         </SwiperSlide>
       </Swiper>
+     
+      {/* <Swiper
+          slidesPerView={1}
+          centeredSlides={true}
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+              delay: 5000,
+              disableOnInteraction: true,
+            }}
+          navigation pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+          className={styles.mySwiper}
+      >
+         <SwiperSlide> 
+            <div className={styles.carousel1}>
+            <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+            </div>
+            <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <div className={styles.carousel1}>
+          <div className={styles.container1}> 
+            <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
+          </div>
+          <div className={styles.containerSpace}></div>
+          
+          <div className={styles.container2}>
+            <h2 classname={styles.sponsorText}>Name of company</h2>
+            <h2 classname={styles.sponsorText}>Sponsored which event</h2>
+            <h2 classname={styles.sponsorText}>About the company</h2>
+          </div> 
+        </div>
+        </SwiperSlide>
+      </Swiper>  */}
 
     {/*carousel div ends right here and WHY SPONSOR US div starts from here */}
 
@@ -263,30 +422,6 @@ const Sponsors = () => {
       </div>
 
       <div className={styles.box6}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box7}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box8}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box9}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box10}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box11}>
-        <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
-      </div>
-
-      <div className={styles.box12}>
         <img id={styles.spnsrlogo1} src={logo} alt="sponsor logo"></img>
       </div>
     
